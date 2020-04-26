@@ -8,7 +8,7 @@ const {
   signupAdd,
   loginAdd,
   profileView,
-} = require('../controllers')
+} = require('../controllers/index')
 
 /* GET home page */
 router.get('/', indexView)

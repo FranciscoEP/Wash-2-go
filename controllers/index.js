@@ -41,13 +41,10 @@ exports.loginView = (req, res) => {
   res.render('auth/login')
 }
 
-exports.loginAdd = (req, res) => {
-  passport.authenticate('local', {
-    successRedirect: '/profile',
-    failureRedirect: '/login',
-    failureFlash: true,
-  })
-}
+exports.loginAdd = passport.authenticate('local', {
+  successRedirect: '/profile',
+  failureRedirect: '/login',
+})
 
 exports.profileView = (req, res) => {
   res.render('auth/profile')
