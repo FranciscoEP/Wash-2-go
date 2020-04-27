@@ -49,3 +49,8 @@ exports.loginAdd = passport.authenticate('local', {
 exports.profileView = (req, res) => {
   res.render('auth/profile')
 }
+
+exports.logOut = (req, res) => {
+  req.logout();
+  res.redirect('/index');
+};
