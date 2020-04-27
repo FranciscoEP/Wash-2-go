@@ -50,7 +50,7 @@ exports.profileView = (req, res) => {
   res.render('auth/profile')
 }
 
-exports.logOut = (req, res) => {
-  req.logout();
-  res.redirect('/index');
-};
+exports.logout = (req, res) => {
+  req.logout()
+  res.redirect('/login')
+}
