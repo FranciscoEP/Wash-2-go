@@ -11,6 +11,8 @@ const {
   loginView,
   signupAdd,
   loginAdd,
+  loginViewWorker,
+  loginAddWorker,
   profileView,
   logout,
   profileWorkerView,
@@ -27,15 +29,16 @@ router.get('/workerForm', ensureLoggedOut(), workerFormView)
 router.post('/workerForm', ensureLoggedOut(), workerFormAdd)
 
 //Login
-router.get('/login', ensureLoggedOut(), loginView)
-router.post('/login', ensureLoggedOut(), loginAdd)
+router.get('/loginUser', ensureLoggedOut(), loginView)
+router.post('/loginUser', ensureLoggedOut(), loginAdd)
+router.get('/loginWorker', ensureLoggedOut(), loginViewWorker)
+router.post('/loginWorker', ensureLoggedOut(), loginAddWorker)
 
 //Profile
-router.get('/profileUser', ensureLoggedIn('/login'), profileView)
-router.get('/profileWorker', ensureLoggedIn('/login', profileWorkerView))
+router.get('/profileUser', ensureLoggedIn('/loginUser'), profileView)
+router.get('/profileWorker', ensureLoggedIn('/loginWorker'), profileWorkerView)
 
 //Logout
 router.get('/logout', ensureLoggedIn('/login'), logout)
-
 
 module.exports = router

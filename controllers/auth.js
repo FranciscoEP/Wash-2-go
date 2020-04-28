@@ -64,14 +64,22 @@ exports.signupAdd = (req, res, next) => {
 }
 
 exports.loginView = (req, res) => {
-  res.render('auth/login')
+  res.render('auth/loginUser')
 }
 
 exports.loginAdd = passport.authenticate('local', {
   successRedirect: '/profileUser',
-  failureRedirect: '/login',
+  failureRedirect: '/loginUser',
 })
 
+exports.loginViewWorker = (req, res) => {
+  res.render('auth/loginWorker')
+}
+
+exports.loginAddWorker = passport.authenticate('local', {
+  successRedirect: '/profileWorker',
+  failureRedirect: '/loginWorker',
+})
 exports.profileView = (req, res) => {
   res.render('auth/profileUser')
 }
@@ -86,10 +94,10 @@ exports.workerFormView = (req, res) => {
 exports.workerFormAdd = async (req, res) => {
   const { description, sector } = req.body
   const form = await Sector.create({ sector, description })
-  res.redirect('/profileWorker')
+  res.redirect('/loginWorker')
 }
 
 exports.logout = (req, res) => {
   req.logout()
-  res.redirect('/login')
+  res.redirect('/')
 }
