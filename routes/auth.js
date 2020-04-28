@@ -5,6 +5,8 @@ const { ensureLoggedIn, ensureLoggedOut } = require('connect-ensure-login')
 const {
   signupWorkerView,
   signupWorkerAdd,
+  chambeadorFormView,
+  chambeadorFormAdd,
   signupView,
   loginView,
   signupAdd,
@@ -20,6 +22,8 @@ router.post('/signup', ensureLoggedOut(), signupAdd)
 //Sign up Chambeador
 router.get('/signupWorker', ensureLoggedOut(), signupWorkerView)
 router.post('/signupWorker', ensureLoggedOut(), signupWorkerAdd)
+router.get('/workerForm', ensureLoggedOut(), chambeadorFormView)
+router.post('/workerForm', ensureLoggedOut(), chambeadorFormAdd)
 //Login
 router.get('/login', ensureLoggedOut(), loginView)
 router.post('/login', ensureLoggedOut(), loginAdd)

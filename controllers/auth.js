@@ -1,6 +1,7 @@
 const User = require('../models/User')
 const Sector = require('../models/Sector') // Revisar si es necesario para registrar el sector
 const passport = require('../config/passport')
+
 exports.signupWorkerView = (req, res) => {
   res.render('auth/signupWorker')
 }
@@ -24,7 +25,7 @@ exports.signupWorkerAdd = (req, res, next) => {
   User.register({ email, name, sector, chambeador }, password)
     .then((userCreated) => {
       console.log(userCreated)
-      res.redirect('/login')
+      res.redirect('/workerForm')
     })
     .catch((error) => {
       next(error)
@@ -73,6 +74,18 @@ exports.loginAdd = passport.authenticate('local', {
 
 exports.profileView = (req, res) => {
   res.render('auth/profile')
+}
+
+exports.chambeadorFormView = (req, res) => {
+  res.render('auth/chambeadorForm')
+}
+
+exports.chambeadorFormAdd = async (req, res) => {
+  const { description, sector } = req.body
+
+  await Sector.findOneAndUpdate({ userId: req.user.id }, { sector, description })
+
+  res.redirect('/profile')
 }
 
 exports.logout = (req, res) => {
