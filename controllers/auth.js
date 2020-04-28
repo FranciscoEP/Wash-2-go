@@ -76,14 +76,14 @@ exports.profileView = (req, res) => {
   res.render('auth/profile')
 }
 
-exports.chambeadorFormView = (req, res) => {
-  res.render('auth/chambeadorForm')
+exports.workerFormView = (req, res) => {
+  res.render('auth/workerForm')
 }
 
-exports.chambeadorFormAdd = async (req, res) => {
+exports.workerFormAdd = async (req, res) => {
   const { description, sector } = req.body
 
-  await Sector.findOneAndUpdate({ userId: req.user.id }, { sector, description })
+  await Sector.findOneAndUpdate({ userId: req.user.id }, sector, description)
 
   res.redirect('/profile')
 }

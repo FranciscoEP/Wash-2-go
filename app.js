@@ -12,7 +12,11 @@ const passport = require('./config/passport')
 const session = require('express-session')
 
 mongoose
-  .connect('mongodb://localhost/chambitasmx', { useNewUrlParser: true })
+  .connect('mongodb://localhost/chambitasmx', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+  })
   .then((x) => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
