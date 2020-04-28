@@ -71,7 +71,9 @@ app.locals.title = 'Chambitas Mx'
 
 const index = require('./routes/index')
 const auth = require('./routes/auth')
+const createOrder = require('./routes/createOrder')
 app.use('/', index)
+app.use('/', auth)
 app.use('/', auth)
 
 module.exports = app

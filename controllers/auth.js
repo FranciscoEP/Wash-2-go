@@ -76,15 +76,17 @@ exports.profileView = (req, res) => {
   res.render('auth/profile')
 }
 
+exports.profileWorkerView = (req, res) => {
+  res.render('auth/profileWorker')
+}
 exports.workerFormView = (req, res) => {
   res.render('auth/workerForm')
 }
 
 exports.workerFormAdd = async (req, res) => {
   const { description, sector } = req.body
-   const form = await Sector.create({ sector, description })
-   console.log(form)
-  res.redirect('/profile')
+  const form = await Sector.create({ sector, description })
+  res.redirect('/profileWorker', form)
 }
 
 exports.logout = (req, res) => {

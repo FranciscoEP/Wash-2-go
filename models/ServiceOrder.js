@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const sectorSchema = new Schema(
+const serviceOrderSchema = new Schema(
   {
     chambeadorId: {
       type: Schema.Types.ObjectId,
@@ -18,5 +18,5 @@ const sectorSchema = new Schema(
   }
 )
 
-const Sector = mongoose.model('Sector', sectorSchema)
-module.exports = Supplier
+const ServiceOrder = mongoose.model('ServiceOrder', serviceOrderSchema)
+module.exports = ServiceOrder

@@ -13,6 +13,7 @@ const {
   loginAdd,
   profileView,
   logout,
+  profileWorkerView,
 } = require('../controllers/auth')
 
 //Sign up User
@@ -24,12 +25,14 @@ router.get('/signupWorker', ensureLoggedOut(), signupWorkerView)
 router.post('/signupWorker', ensureLoggedOut(), signupWorkerAdd)
 router.get('/workerForm', ensureLoggedOut(), workerFormView)
 router.post('/workerForm', ensureLoggedOut(), workerFormAdd)
+
 //Login
 router.get('/login', ensureLoggedOut(), loginView)
 router.post('/login', ensureLoggedOut(), loginAdd)
 
 //Profile
 router.get('/profile', ensureLoggedIn('/login'), profileView)
+router.get('/profileWorker', ensureLoggedIn('/login', profileWorkerView))
 
 //Logout
 router.get('/logout', ensureLoggedIn('/login'), logout)
