@@ -66,7 +66,8 @@ app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')))
 app.locals.title = 'Chambitas Mx'
 
 const index = require('./routes/index')
-
+const auth = require('./routes/auth')
 app.use('/', index)
+app.use('/', auth)
 
 module.exports = app
