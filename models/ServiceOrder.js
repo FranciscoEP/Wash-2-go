@@ -3,14 +3,15 @@ const Schema = mongoose.Schema
 
 const serviceOrderSchema = new Schema(
   {
-    chambeadorId: {
-      type: Schema.Types.ObjectId,
-      ref: 'User',
-    },
+    // chambeadorId: {
+    //   type: Schema.Types.ObjectId,
+    //   ref: 'User',
+    // },
     clienteId: {
       type: Schema.Types.ObjectId,
       ref: 'User',
     },
+    description: String,
   },
   {
     versionKey: false,

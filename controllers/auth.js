@@ -56,7 +56,7 @@ exports.signupAdd = (req, res, next) => {
   User.register({ email, name }, password)
     .then((userCreated) => {
       console.log(userCreated)
-      res.redirect('/login')
+      res.redirect('/profile')
     })
     .catch((error) => {
       next(error)
@@ -86,7 +86,7 @@ exports.workerFormView = (req, res) => {
 exports.workerFormAdd = async (req, res) => {
   const { description, sector } = req.body
   const form = await Sector.create({ sector, description })
-  res.redirect('/profileWorker', form)
+  res.redirect('/profileWorker')
 }
 
 exports.logout = (req, res) => {

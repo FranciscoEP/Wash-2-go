@@ -1,1 +1,14 @@
 <h1>Crea tu orden</h1>
+<form action="/createOrder" method="POST">
+  <label name="sector">¿Qué servicio requieres?</label>
+  <select name="sector" id="sector">
+    <option value="Mecánico">Mecánico</option>
+    <option value="Plomero">Plomero</option>
+    <option value="Labores Domésticas">Labores Domésticas</option>
+  </select>
+  <label for="description">Describa el trabajo a realizar</label>
+  <input type="description" name="description"><br><br>
+  <input type="submit" value="Orden de servicio">
+</form>
+
+<a href="profile">Go back</a>
