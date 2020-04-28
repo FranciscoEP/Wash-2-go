@@ -84,8 +84,12 @@ exports.profileView = (req, res) => {
   res.render('auth/profileUser')
 }
 
-exports.profileWorkerView = (req, res) => {
-  res.render('auth/profileWorker')
+exports.profileWorkerView = async (req, res) => {
+  const { _id: userId } = req.user
+  const populateSector = await Sector.findOne().populate('userId')
+  console.log(populateSector)
+  console.log(req.user)
+  res.render('auth/profileWorker', populateSector)
 }
 exports.workerFormView = (req, res) => {
   res.render('auth/workerForm')
