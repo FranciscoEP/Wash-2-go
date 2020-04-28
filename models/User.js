@@ -7,13 +7,9 @@ const userSchema = new Schema(
     name: String,
     email: String,
     description: String,
-    necesidadParticular: { type: String, default: 'No' },
-    sector: [],
-    city: [],
+    role: { type: String, enum: ['USER', 'CHAMBEADOR'], default: 'USER' },
   },
-  {
-    timestamps: true,
-  }
+  { versionKey: false, timestamps: true }
 )
 
 userSchema.plugin(PLM, { usernameField: 'email' })

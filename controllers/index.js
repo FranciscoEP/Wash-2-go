@@ -1,9 +1,39 @@
 const User = require('../models/User')
-const Supplier = require('../models/Supplier')
+const Supplier = require('../models/Sector')
 const passport = require('../config/passport')
 
 exports.indexView = (req, res) => {
   res.render('index')
+}
+
+exports.signupWorkerView = (req, res) => {
+  res.render('auth/signupWorker')
+}
+exports.signupWorkerAdd = (req, res, next) => {
+  const { name, email, password, sector } = req.body
+  const newWorker = new User()
+  if (email === '' || password === '') {
+    return res.render('auth/signupWorker', { message: 'Indicate an email and password' })
+  }
+
+  User.findOne({ email })
+    .then((user) => {
+      if (user !== null) {
+        return res.render('auth/signupWorker', { message: 'The username already exists' })
+      }
+    })
+    .catch((error) => {
+      next(error)
+    })
+
+  User.register({ email, name, sector }, password)
+    .then((userCreated) => {
+      console.log(userCreated)
+      res.redirect('/login')
+    })
+    .catch((error) => {
+      next(error)
+    })
 }
 
 exports.signupView = (req, res) => {

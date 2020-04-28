@@ -4,6 +4,8 @@ const { ensureLoggedIn, ensureLoggedOut } = require('connect-ensure-login')
 
 const {
   indexView,
+  signupWorkerView,
+  signupWorkerAdd,
   signupView,
   loginView,
   signupAdd,
@@ -15,10 +17,15 @@ const {
 /* GET home page */
 router.get('/', indexView)
 
-//Sign up
+// router.get('/userorsupplier', usrorsu)
+
+//Sign up User
 router.get('/signup', ensureLoggedOut(), signupView)
 router.post('/signup', ensureLoggedOut(), signupAdd)
 
+//Sign up Chambeador
+router.get('/signupWorker', ensureLoggedOut(), signupWorkerView)
+router.post('/signupWorker', ensureLoggedOut(), signupWorkerAdd)
 //Login
 router.get('/login', ensureLoggedOut(), loginView)
 router.post('/login', ensureLoggedOut(), loginAdd)
