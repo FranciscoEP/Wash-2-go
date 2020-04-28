@@ -56,7 +56,7 @@ exports.signupAdd = (req, res, next) => {
   User.register({ email, name }, password)
     .then((userCreated) => {
       console.log(userCreated)
-      res.redirect('/profile')
+      res.redirect('/profileUser')
     })
     .catch((error) => {
       next(error)
@@ -68,12 +68,12 @@ exports.loginView = (req, res) => {
 }
 
 exports.loginAdd = passport.authenticate('local', {
-  successRedirect: '/profile',
+  successRedirect: '/profileUser',
   failureRedirect: '/login',
 })
 
 exports.profileView = (req, res) => {
-  res.render('auth/profile')
+  res.render('auth/profileUser')
 }
 
 exports.profileWorkerView = (req, res) => {

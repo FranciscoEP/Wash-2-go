@@ -1,8 +1,9 @@
 const express = require('express')
 const router = express.Router()
+const { ensureLoggedIn, ensureLoggedOut } = require('connect-ensure-login')
 
-const { chambitasView } = require('../controllers/chambitas')
+const { chambitasMecanicos } = require('../controllers/chambitas')
 
-router.get('/chambitas', chambitasView)
+router.get('/chambitasMecanicos',ensureLoggedIn(), chambitasMecanicos)
 
 module.exports = router

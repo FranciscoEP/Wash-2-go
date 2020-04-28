@@ -31,10 +31,11 @@ router.get('/login', ensureLoggedOut(), loginView)
 router.post('/login', ensureLoggedOut(), loginAdd)
 
 //Profile
-router.get('/profile', ensureLoggedIn('/login'), profileView)
+router.get('/profileUser', ensureLoggedIn('/login'), profileView)
 router.get('/profileWorker', ensureLoggedIn('/login', profileWorkerView))
 
 //Logout
 router.get('/logout', ensureLoggedIn('/login'), logout)
+
 
 module.exports = router
