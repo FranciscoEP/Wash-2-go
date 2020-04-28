@@ -7,9 +7,8 @@ exports.createOrderView = (req, res) => {
 //Create order
 exports.createOrderAdd = async (req, res) => {
   const { description, sector } = req.body
-  const { _id: userId } = req.user
-  // console.log(req.body)
-  console.log(req.session.user)
-  // const order = await ServiceOrder.create(description, sector, userId)
-  res.render('auth/profile', order)
+  // const { _id: userId } = req.user
+
+  const order = await ServiceOrder.create(description, sector)
+  res.render('auth/profileUser', order)
 }
