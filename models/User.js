@@ -8,6 +8,7 @@ const userSchema = new Schema(
     email: String,
     description: String,
     chambeador: false,
+    sector: { type : Schema.Types.ObjectId, ref: 'Sector' }
   },
   { versionKey: false, timestamps: true }
 )

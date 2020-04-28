@@ -82,9 +82,8 @@ exports.workerFormView = (req, res) => {
 
 exports.workerFormAdd = async (req, res) => {
   const { description, sector } = req.body
-
-  await Sector.findOneAndUpdate({ userId: req.user.id }, sector, description)
-
+   const form = await Sector.create({ sector, description })
+   console.log(form)
   res.redirect('/profile')
 }
 
