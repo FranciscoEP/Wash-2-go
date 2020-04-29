@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 const sectorSchema = new Schema(
   {
     userId: { type: Schema.Types.ObjectId, ref: 'User' },
-    limpiezaCarroceria: Boolean,
+    limpiezaCarroceria: String,
     limpiezaRines: Boolean,
     lavadoMotor: Boolean,
     limpiezaVestiduras: Boolean,
@@ -13,6 +13,7 @@ const sectorSchema = new Schema(
     lavadoChasis: Boolean,
     encerado: Boolean,
     aspirado: Boolean,
+    progressStatus: Boolean,
   },
   {
     // versionKey: false,

@@ -1,5 +1,15 @@
 <p>Tus órdenes</p>
 
-{{!-- {{#each}}
-
-{{/each}} --}}
+{{#each order}}
+<p>Id de tu órden: {{this.userId}}</p>
+<p> Limpieza de carocería: {{this.limpiezaCarroceria}}</p>
+<p> Limpieza de rines: {{this.limpiezaRines}}</p>
+<p>Lavado de motor: {{this.lavadoMotor}}</p>
+<p> Limpieza de vestiduras: {{this.limpiezaVestiduras}}</p>
+<p>Descontaminante de cristales: {{this.descontaminanteCristales}}</p>
+<p>Pulido de faros: {{this.pulidoFaros}}</p>
+<p>Lavado de chasis: {{this.lavadoChasis}}</p>
+<p>Encerado: {{this.encerado}}</p>
+<p>Apirado: {{this.aspirado}}</p>
+<p>Finalizado: {{this.progressStatus}}</p>
+{{/each}}
