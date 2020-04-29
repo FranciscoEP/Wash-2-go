@@ -14,6 +14,7 @@ const sectorSchema = new Schema(
     encerado: Boolean,
     aspirado: Boolean,
     progressStatus: Boolean,
+    orderNumber: Number,
   },
   {
     // versionKey: false,
