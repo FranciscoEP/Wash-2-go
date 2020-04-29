@@ -15,8 +15,9 @@ exports.detailOrderView = (req, res) => {
 
 exports.editOrderView = async (req, res) => {
   const edit = req.params.id
+  console.log(req.params.id)
   const editOrder = await Sector.findById(edit)
-  res.render('auth/editOrder', edit)
+  res.render('auth/editOrder')
 }
 
 // exports.editOrderAdd = async (req, res) => {
@@ -24,3 +25,9 @@ exports.editOrderView = async (req, res) => {
 //   await Sector.findByIdAndUpdate(edit, { $set: { ...req.body } }, { new: true })
 //   res.render(`auth/editOrder/${edit}`, edit)
 // }
+
+exports.deleteOrder = async (req, res) => {
+  const deleteOrder = req.params.id
+  await Sector.findByIdAndRemove(deleteOrder)
+  res.redirect('/detailOrder')
+}
