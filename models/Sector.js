@@ -15,7 +15,7 @@ const sectorSchema = new Schema(
     aspirado: Boolean,
   },
   {
-    versionKey: false,
+    // versionKey: false,
     timestamps: true,
   }
 )

@@ -1,55 +1,50 @@
-<form action="/workerForm" method="POST"></form>
-<label for="limpiezaCarroceria">Limpieza de carrocería</label>
-  <select name="cars">
-    <option value= true >Si quiero!</option>
-    <option value= false >No, gracias!</option>
-  </select>
-  <input type="submit">
-</form>
-
-
-
-
-
-{{!-- <form action="/workerForm" method="POST">
- <label for="cars">Choose a car:</label>
-  <select name="limpiezaCarroceria" id="sector">
-    <option value="Si quiero!">Si quiero!</option>
-    <option value="No, gracias!">No, gracias!</option>
-  </select>
-    <select name="limpiezaRines" id="sector">
-    <option value="Si quiero!">Mecánico</option>
-    <option value="No, gracias!">Plomero</option>
-  </select>
-    <select name="lavadoMotor" id="sector">
-    <option value="Si quiero!">Mecánico</option>
-    <option value="No, gracias!">Plomero</option>
-  </select>
-    <select name="limpiezaVestiduras" id="sector">
-    <option value="Si quiero!">Mecánico</option>
-    <option value="No, gracias!">Plomero</option>
-  </select>
-    <select name="descontaminanteCristales" id="sector">
-    <option value="Si quiero!">Mecánico</option>
-    <option value="No, gracias!">Plomero</option>
-  </select>
-      <select name="pulidoFaros" id="sector">
-    <option value="Si quiero!">Mecánico</option>
-    <option value="No, gracias!">Plomero</option>
-  </select>
-      <select name="lavadoChasis" id="sector">
-    <option value="Si quiero!">Mecánico</option>
-    <option value="No, gracias!">Plomero</option>
-  </select>
-      <select name="encerado" id="sector">
-    <option value="Si quiero!">Mecánico</option>
-    <option value="No, gracias!">Plomero</option>
-  </select>
-   <select name="aspirado" id="sector">
-    <option value="Si quiero!">Mecánico</option>
-    <option value="No, gracias!">Plomero</option>
-  </select>
-
-  <textarea name="description" id="description" cols="30" rows="10">Tienes alguna instrucción especial? Déjalas aquí.</textarea>
-  <input type="submit" value="Sign Up!">
-</form> --}}
+<div>
+  <form action="/workerForm" method="POST">
+    <label for="limpiezaCarroceria">Limpieza de Carrocería</label>
+    <select id="limpiezaCarroceria" name="limpiezaCarroceria">
+      <option value="true">¡Sí quiero!</option>
+      <option value="false">¡No, gracias!</option>
+    </select>
+    <label for="limpiezaRines">Limpieza de rines</label>
+    <select id="limpiezaRines" name="limpiezaRines">
+      <option value="true">¡Sí quiero!</option>
+      <option value="false">¡No, gracias!</option>
+    </select>
+    <label for="lavadoMotor">Limpieza de motor</label>
+    <select id="lavadoMotor" name="lavadoMotor">
+      <option value="true">¡Sí quiero!</option>
+      <option value="false">¡No, gracias!</option>
+    </select>
+    <label for="limpiezaVestiduras">Limpieza de vestiduras</label>
+    <select id="limpiezaVestiduras" name="limpiezaVestiduras">
+      <option value="true">¡Sí quiero!</option>
+      <option value="false">¡No, gracias!</option>
+    </select>
+    <label for="descontaminanteCristales">Descontaminante de Cristales</label>
+    <select id="descontaminanteCristales" name="descontaminanteCristales">
+      <option value="true">¡Sí quiero!</option>
+      <option value="false">¡No, gracias!</option>
+    </select>
+    <label for="pulidoFaros">Pulido de Faros</label>
+    <select id="pulidoFaros" name="pulidoFaros">
+      <option value="true">¡Sí quiero!</option>
+      <option value="false">¡No, gracias!</option>
+    </select>
+    <label for="lavadoChasis">Lavado de Chasis</label>
+    <select id="lavadoChasis" name="lavadoChasis">
+      <option value="true">¡Sí quiero!</option>
+      <option value="false">¡No, gracias!</option>
+    </select>
+    <label for="encerado">Encerado</label>
+    <select id="encerado" name="encerado">
+      <option value="true">¡Sí quiero!</option>
+      <option value="false">¡No, gracias!</option>
+    </select>
+    <label for="aspirado">Aspirado</label>
+    <select id="aspirado" name="aspirado">
+      <option value="true">¡Sí quiero!</option>
+      <option value="false">¡No, gracias!</option>
+    </select>
+    <input type="submit">
+  </form>
+</div>

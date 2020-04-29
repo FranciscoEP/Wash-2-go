@@ -42,20 +42,18 @@ exports.loginAddWorker = passport.authenticate('local', {
 })
 
 exports.profileWorkerView = async (req, res) => {
-  const { _id: userId } = req.user
-  const populateSector = await Sector.findById().populate('userId')
-  console.log(populateSector)
-  console.log(req.user)
-  res.render('auth/profileWorker', populateSector)
+  res.render('auth/profileWorker')
 }
 exports.workerFormView = (req, res) => {
   res.render('auth/workerForm')
 }
 
+//Create
 exports.workerFormAdd = async (req, res) => {
   const { _id: userId } = req.user
-  //const { description, sector } = req.body
+  console.log(req.user)
   const form = await Sector.create(req.body, userId)
+  console.log(form)
   res.redirect('/profileWorker')
 }
 
