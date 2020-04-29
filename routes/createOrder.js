@@ -2,11 +2,17 @@ const express = require('express')
 const router = express.Router()
 const { ensureLoggedIn, ensureLoggedOut } = require('connect-ensure-login')
 const {
+  workerFormView,
+  workerFormAdd,
   editOrderView,
   editOrderAdd,
   detailOrderView,
   deleteOrder,
 } = require('../controllers/createOrder')
+
+//Create
+router.get('/workerForm', ensureLoggedIn(), workerFormView)
+router.post('/workerForm', ensureLoggedIn(), workerFormAdd)
 
 //Read
 router.get('/detailOrder', ensureLoggedIn(), detailOrderView)

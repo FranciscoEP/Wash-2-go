@@ -44,39 +44,8 @@ exports.loginAddWorker = passport.authenticate('local', {
 exports.profileWorkerView = async (req, res) => {
   res.render('auth/profileWorker')
 }
-exports.workerFormView = (req, res) => {
-  res.render('auth/workerForm')
-}
 
 //Create
-exports.workerFormAdd = async (req, res) => {
-  const {
-    limpiezaCarroceria,
-    limpiezaRines,
-    lavadoMotor,
-    limpiezaVestiduras,
-    descontaminanteCristales,
-    pulidoFaros,
-    lavadoChasis,
-    encerado,
-    aspirado,
-  } = req.body
-  console.log(req.user.id)
-  const form = await Sector.create({
-    limpiezaCarroceria,
-    limpiezaRines,
-    lavadoMotor,
-    limpiezaVestiduras,
-    descontaminanteCristales,
-    pulidoFaros,
-    lavadoChasis,
-    encerado,
-    aspirado,
-    userId: req.user.id,
-  })
-  console.log(req.body)
-  res.redirect('/profileWorker')
-}
 
 exports.logout = (req, res) => {
   req.logout()

@@ -17,7 +17,7 @@ const sectorSchema = new Schema(
     orderNumber: Number,
   },
   {
-    // versionKey: false,
+    versionKey: false,
     timestamps: true,
   }
 )
