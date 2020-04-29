@@ -7,28 +7,10 @@ exports.workerFormView = (req, res) => {
 }
 
 exports.workerFormAdd = async (req, res) => {
-  const {
-    limpiezaCarroceria,
-    limpiezaRines,
-    lavadoMotor,
-    limpiezaVestiduras,
-    descontaminanteCristales,
-    pulidoFaros,
-    lavadoChasis,
-    encerado,
-    aspirado,
-  } = req.body
+  const data = stringToBoolean(req.body)
   console.log(req.user.id)
   const form = await Sector.create({
-    limpiezaCarroceria,
-    limpiezaRines,
-    lavadoMotor,
-    limpiezaVestiduras,
-    descontaminanteCristales,
-    pulidoFaros,
-    lavadoChasis,
-    encerado,
-    aspirado,
+    ...data,
     userId: req.user.id,
   })
   console.log(req.body)
@@ -37,8 +19,7 @@ exports.workerFormAdd = async (req, res) => {
 
 exports.detailOrderView = (req, res) => {
   const { _id: userId } = req.user
-  let counter = 0
-  counter++
+
   Sector.find({ userId })
     .then((theOrders) => {
       res.render('auth/detailOrder', { order: theOrders })
@@ -52,17 +33,31 @@ exports.editOrderView = async (req, res) => {
   const edit = req.params.id
   console.log(req.params.id)
   const editOrder = await Sector.findById(edit)
-  res.render('auth/editOrder')
+  res.render('auth/editOrder', { _id: edit })
 }
-//URGE POR CRUD
+
 exports.editOrderAdd = async (req, res) => {
   const edit = req.params.id
-  await Sector.findByIdAndUpdate(edit, { $set: { ...req.body } }, { new: true })
-  res.render(`auth/editOrder/${edit}`, edit)
+  console.log(edit)
+  const data = stringToBoolean(req.body)
+  console.log({ ...data })
+  try {
+    await Sector.findByIdAndUpdate(edit, { $set: { ...data } }, { new: true })
+    res.render(`auth/editOrder/${edit}`, edit)
+  } catch (error) {
+    console.log(error)
+  }
 }
 
 exports.deleteOrder = async (req, res) => {
   const deleteOrder = req.params.id
   await Sector.findByIdAndRemove(deleteOrder)
   res.redirect('/detailOrder')
+}
+
+function stringToBoolean(obj) {
+  for (let key in obj) {
+    obj[key] = obj[key] === 'true' ? true : false
+  }
+  return obj
 }

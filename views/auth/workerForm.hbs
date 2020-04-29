@@ -1,9 +1,10 @@
 <div>
+  <a href="/profileWorker">Volver a Home</a>
   <form action="/workerForm" method="POST">
     <label for="limpiezaCarroceria">Limpieza de Carrocería</label>
     <select id="limpiezaCarroceria" name="limpiezaCarroceria">
-      <option value="solicitado">¡Sí quiero!</option>
-      <option value="no requerido">¡No, gracias!</option>
+      <option value="true">¡Sí quiero!</option>
+      <option value="false">¡No, gracias!</option>
     </select>
     <label for="limpiezaRines">Limpieza de rines</label>
     <select id="limpiezaRines" name="limpiezaRines">
@@ -47,5 +48,4 @@
     </select>
     <input type="submit">
   </form>
-  <a href="/profileWorker">Volver a Home</a>
 </div>
