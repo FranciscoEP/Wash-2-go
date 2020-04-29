@@ -1,0 +1,51 @@
+<p>¿Desea cambiar algún servicio?</p>
+<div>
+  <form action="/editOrder/{{_id}}" method="POST">
+    <label for="limpiezaCarroceria">Limpieza de Carrocería</label>
+    <select id="limpiezaCarroceria" name="limpiezaCarroceria">
+      <option value="solicitado">¡Sí quiero!</option>
+      <option value="no requerido">¡No, gracias!</option>
+    </select>
+    <label for="limpiezaRines">Limpieza de rines</label>
+    <select id="limpiezaRines" name="limpiezaRines">
+      <option value="true">¡Sí quiero!</option>
+      <option value="false">¡No, gracias!</option>
+    </select>
+    <label for="lavadoMotor">Limpieza de motor</label>
+    <select id="lavadoMotor" name="lavadoMotor">
+      <option value="true">¡Sí quiero!</option>
+      <option value="false">¡No, gracias!</option>
+    </select>
+    <label for="limpiezaVestiduras">Limpieza de vestiduras</label>
+    <select id="limpiezaVestiduras" name="limpiezaVestiduras">
+      <option value="true">¡Sí quiero!</option>
+      <option value="false">¡No, gracias!</option>
+    </select>
+    <label for="descontaminanteCristales">Descontaminante de Cristales</label>
+    <select id="descontaminanteCristales" name="descontaminanteCristales">
+      <option value="true">¡Sí quiero!</option>
+      <option value="false">¡No, gracias!</option>
+    </select>
+    <label for="pulidoFaros">Pulido de Faros</label>
+    <select id="pulidoFaros" name="pulidoFaros">
+      <option value="true">¡Sí quiero!</option>
+      <option value="false">¡No, gracias!</option>
+    </select>
+    <label for="lavadoChasis">Lavado de Chasis</label>
+    <select id="lavadoChasis" name="lavadoChasis">
+      <option value="true">¡Sí quiero!</option>
+      <option value="false">¡No, gracias!</option>
+    </select>
+    <label for="encerado">Encerado</label>
+    <select id="encerado" name="encerado">
+      <option value="true">¡Sí quiero!</option>
+      <option value="false">¡No, gracias!</option>
+    </select>
+    <label for="aspirado">Aspirado</label>
+    <select id="aspirado" name="aspirado">
+      <option value="true">¡Sí quiero!</option>
+      <option value="false">¡No, gracias!</option>
+    </select>
+    <input type="submit">
+  </form>
+</div>
