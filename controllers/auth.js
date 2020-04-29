@@ -25,52 +25,12 @@ exports.signupWorkerAdd = (req, res, next) => {
   User.register({ email, name, sector, chambeador }, password)
     .then((userCreated) => {
       console.log(userCreated)
-      res.redirect('/workerForm')
+      res.redirect('/loginWorker')
     })
     .catch((error) => {
       next(error)
     })
 }
-
-exports.signupView = (req, res) => {
-  res.render('auth/signup')
-}
-
-exports.signupAdd = (req, res, next) => {
-  const { name, email, password, verify } = req.body
-
-  if (email === '' || password === '') {
-    return res.render('auth/signup', { message: 'Indicate an email and password' })
-  }
-
-  User.findOne({ email })
-    .then((user) => {
-      if (user !== null) {
-        return res.render('auth/signup', { message: 'The username already exists' })
-      }
-    })
-    .catch((error) => {
-      next(error)
-    })
-
-  User.register({ email, name }, password)
-    .then((userCreated) => {
-      console.log(userCreated)
-      res.redirect('/profileUser')
-    })
-    .catch((error) => {
-      next(error)
-    })
-}
-
-exports.loginView = (req, res) => {
-  res.render('auth/loginUser')
-}
-
-exports.loginAdd = passport.authenticate('local', {
-  successRedirect: '/profileUser',
-  failureRedirect: '/loginUser',
-})
 
 exports.loginViewWorker = (req, res) => {
   res.render('auth/loginWorker')
@@ -80,13 +40,10 @@ exports.loginAddWorker = passport.authenticate('local', {
   successRedirect: '/profileWorker',
   failureRedirect: '/loginWorker',
 })
-exports.profileView = (req, res) => {
-  res.render('auth/profileUser')
-}
 
 exports.profileWorkerView = async (req, res) => {
   const { _id: userId } = req.user
-  const populateSector = await Sector.findOne().populate('userId')
+  const populateSector = await Sector.findById().populate('userId')
   console.log(populateSector)
   console.log(req.user)
   res.render('auth/profileWorker', populateSector)
@@ -96,9 +53,10 @@ exports.workerFormView = (req, res) => {
 }
 
 exports.workerFormAdd = async (req, res) => {
-  const { description, sector } = req.body
-  const form = await Sector.create({ sector, description })
-  res.redirect('/loginWorker')
+  const { _id: userId } = req.user
+  //const { description, sector } = req.body
+  const form = await Sector.create(req.body, userId)
+  res.redirect('/profileWorker')
 }
 
 exports.logout = (req, res) => {

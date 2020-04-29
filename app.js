@@ -12,7 +12,7 @@ const passport = require('./config/passport')
 const session = require('express-session')
 
 mongoose
-  .connect('mongodb://localhost/chambitasmx', {
+  .connect('mongodb://localhost/Wash-2-go', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
@@ -67,15 +67,14 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')))
 
 // default value for title local
-app.locals.title = 'Chambitas Mx'
+app.locals.title = 'Wash-2-go'
 
 const index = require('./routes/index')
 const auth = require('./routes/auth')
 const createOrder = require('./routes/createOrder')
-const chambitas = require('./routes/chambitas')
 app.use('/', index)
 app.use('/', auth)
 app.use('/', createOrder)
-app.use('/', chambitas)
+
 
 module.exports = app

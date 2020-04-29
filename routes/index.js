@@ -7,3 +7,4 @@ const { indexView } = require('../controllers/index')
 router.get('/', indexView)
 
 module.exports = router
+

@@ -3,9 +3,16 @@ const Schema = mongoose.Schema
 
 const sectorSchema = new Schema(
   {
-    sector: { type: String, enum: ['Mecánico', 'Plomero', 'Labores Domésticas'] },
     userId: { type: Schema.Types.ObjectId, ref: 'User' },
-    description: String,
+    limpiezaCarroceria: Boolean,
+    limpiezaRines: Boolean,
+    lavadoMotor: Boolean,
+    limpiezaVestiduras: Boolean,
+    descontaminanteCristales: Boolean,
+    pulidoFaros: Boolean,
+    lavadoChasis: Boolean,
+    encerado: Boolean,
+    aspirado: Boolean,
   },
   {
     versionKey: false,
