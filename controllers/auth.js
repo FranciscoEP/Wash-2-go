@@ -50,28 +50,30 @@ exports.workerFormView = (req, res) => {
 
 //Create
 exports.workerFormAdd = async (req, res) => {
-  const { limpiezaCarroceria,
-    limpiezaRines, 
-    lavadoMotor, 
-    limpiezaVestiduras, 
+  const {
+    limpiezaCarroceria,
+    limpiezaRines,
+    lavadoMotor,
+    limpiezaVestiduras,
     descontaminanteCristales,
-    pulidoFaros, 
-    lavadoChasis, 
-    encerado, 
-    aspirado 
+    pulidoFaros,
+    lavadoChasis,
+    encerado,
+    aspirado,
   } = req.body
   console.log(req.user.id)
-  const form = await Sector.create({ 
+  const form = await Sector.create({
     limpiezaCarroceria,
-    limpiezaRines, 
-    lavadoMotor, 
-    limpiezaVestiduras, 
+    limpiezaRines,
+    lavadoMotor,
+    limpiezaVestiduras,
     descontaminanteCristales,
-    pulidoFaros, 
-    lavadoChasis, 
-    encerado, 
-    aspirado, 
-    userId : req.user.id})
+    pulidoFaros,
+    lavadoChasis,
+    encerado,
+    aspirado,
+    userId: req.user.id,
+  })
   console.log(req.body)
   res.redirect('/profileWorker')
 }

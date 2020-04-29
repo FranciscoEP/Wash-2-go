@@ -27,6 +27,6 @@ router.post('/loginWorker', ensureLoggedOut(), loginAddWorker)
 router.get('/profileWorker', ensureLoggedIn('/loginWorker'), profileWorkerView)
 
 //Logout
-router.get('/logout', ensureLoggedIn('/login'), logout)
+router.get('/logout', ensureLoggedIn('/loginWorker'), logout)
 
 module.exports = router
