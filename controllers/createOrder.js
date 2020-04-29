@@ -40,10 +40,11 @@ exports.editOrderAdd = async (req, res) => {
   const edit = req.params.id
   console.log(edit)
   const data = stringToBoolean(req.body)
-  console.log({ ...data })
+  console.log(typeof data)
+
   try {
-    await Sector.findByIdAndUpdate(edit, { $set: { ...data } }, { new: true })
-    res.render(`auth/editOrder/${edit}`, edit)
+    await Sector.findByIdAndUpdate(edit, { ...data }, { new: true })
+    res.redirect(`/detailOrder`)
   } catch (error) {
     console.log(error)
   }
@@ -56,8 +57,9 @@ exports.deleteOrder = async (req, res) => {
 }
 
 function stringToBoolean(obj) {
+  const object = {}
   for (let key in obj) {
-    obj[key] = obj[key] === 'true' ? true : false
+    object[key] = obj[key] === 'true' ? true : false
   }
-  return obj
+  return object
 }
