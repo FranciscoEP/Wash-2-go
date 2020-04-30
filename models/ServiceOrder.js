@@ -3,15 +3,17 @@ const Schema = mongoose.Schema
 
 const serviceOrderSchema = new Schema(
   {
-    // chambeadorId: {
-    //   type: Schema.Types.ObjectId,
-    //   ref: 'User',
-    // },
-    clienteId: {
-      type: Schema.Types.ObjectId,
-      ref: 'User',
-    },
-    description: String,
+    userId: { type: Schema.Types.ObjectId, ref: 'User' },
+    limpiezaCarroceria: Boolean,
+    limpiezaRines: Boolean,
+    lavadoMotor: Boolean,
+    limpiezaVestiduras: Boolean,
+    descontaminanteCristales: Boolean,
+    pulidoFaros: Boolean,
+    lavadoChasis: Boolean,
+    encerado: Boolean,
+    aspirado: Boolean,
+    progressStatus: Boolean,
   },
   {
     versionKey: false,

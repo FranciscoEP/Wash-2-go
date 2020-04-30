@@ -3,26 +3,26 @@ const router = express.Router()
 const { ensureLoggedIn, ensureLoggedOut } = require('connect-ensure-login')
 
 const {
-  signupWorkerView,
-  signupWorkerAdd,
-  loginViewWorker,
-  loginAddWorker,
+  signupView,
+  signupAdd,
+  loginView,
+  loginAdd,
   logout,
-  profileWorkerView,
+  profileView,
 } = require('../controllers/auth')
 
-//Sign up Chambeador
-router.get('/signupWorker', ensureLoggedOut(), signupWorkerView)
-router.post('/signupWorker', ensureLoggedOut(), signupWorkerAdd)
+//Sign up
+router.get('/signup', ensureLoggedOut(), signupView)
+router.post('/signup', ensureLoggedOut(), signupAdd)
 
 //Login
-router.get('/loginWorker', ensureLoggedOut(), loginViewWorker)
-router.post('/loginWorker', ensureLoggedOut(), loginAddWorker)
+router.get('/login', ensureLoggedOut(), loginView)
+router.post('/login', ensureLoggedOut(), loginAdd)
 
 //Profile
-router.get('/profileWorker', ensureLoggedIn('/loginWorker'), profileWorkerView)
+router.get('/profile', ensureLoggedIn('/login'), profileView)
 
 //Logout
-router.get('/logout', ensureLoggedIn('/loginWorker'), logout)
+router.get('/logout', ensureLoggedIn('/login'), logout)
 
 module.exports = router

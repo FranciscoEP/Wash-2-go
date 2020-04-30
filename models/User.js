@@ -7,8 +7,7 @@ const userSchema = new Schema(
     name: String,
     email: String,
     description: String,
-    chambeador: false,
-    sector: { type : Schema.Types.ObjectId, ref: 'Sector' }
+    serviceOrder: { type: Schema.Types.ObjectId, ref: 'ServiceOrder' },
   },
   { versionKey: false, timestamps: true }
 )
