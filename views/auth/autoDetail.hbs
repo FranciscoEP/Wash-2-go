@@ -1,0 +1,8 @@
+<h1>Aquì se van a mostrar todos tus autos</h1>
+
+{{#each car}}
+<p>Id de tu órden: {{this.modelo}}</p>
+<a href="/autoDelete/{{_id}}">Eliminar auto</a>
+{{/each}}
+
+<a href="/profile">Volver a Home</a>

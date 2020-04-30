@@ -9,6 +9,8 @@ const {
   loginAdd,
   autoFormView,
   autoFormAdd,
+  autoDetailView,
+  autoDelete,
   logout,
   profileView,
 } = require('../controllers/auth')
@@ -18,6 +20,8 @@ router.get('/signup', ensureLoggedOut(), signupView)
 router.post('/signup', ensureLoggedOut(), signupAdd)
 router.get('/autoForm', ensureLoggedIn(), autoFormView)
 router.post('/autoForm', ensureLoggedIn(), autoFormAdd)
+router.get('/autoDetail', ensureLoggedIn(), autoDetailView)
+router.get('/autoDelete/:id', ensureLoggedIn(), autoDelete)
 
 //Login
 router.get('/login', ensureLoggedOut(), loginView)

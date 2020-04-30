@@ -48,6 +48,26 @@ exports.autoFormAdd = async (req, res) => {
   res.redirect('/profile')
 }
 
+exports.autoDetailView = (req, res) => {
+  const { _id: userId } = req.user
+
+  AutoInfo.find({ userId })
+    .then((theCars) => {
+      res.render('auth/autoDetail', { car: theCars })
+    })
+    .catch((error) => {
+      console.log('Oops tha page your trying to see might not : ', error)
+    })
+}
+
+//Delete cars
+
+exports.autoDelete = async (req, res) => {
+  const deleteOrder = req.params.id
+  await AutoInfo.findByIdAndRemove(deleteOrder)
+  res.redirect('/autoDetail')
+}
+
 exports.loginView = (req, res) => {
   res.render('auth/login')
 }
@@ -67,3 +87,5 @@ exports.logout = (req, res) => {
   req.logout()
   res.redirect('/')
 }
+
+
