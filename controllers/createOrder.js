@@ -12,7 +12,7 @@ exports.orderFormAdd = async (req, res) => {
     ...data,
     userId: req.user.id,
     autoId: req.params.id,
-  }).populate('autoId')
+  })
   res.redirect('/profile')
 }
 
