@@ -6,7 +6,7 @@ exports.orderFormView = (req, res) => {
 }
 
 exports.orderFormAdd = async (req, res) => {
-  const data = stringToBoolean(req.body)
+  const data = req.body
   console.log(req.user.id)
   const form = await ServiceOrder.create({
     ...data,
@@ -24,22 +24,20 @@ exports.detailOrderView = (req, res) => {
       res.render('auth/detailOrder', { order: theOrders })
     })
     .catch((error) => {
-      console.log('Oops tha page your trying to create : ', error)
+      console.log('Oops tha page your trying to see might not : ', error)
     })
 }
 
 exports.editOrderView = async (req, res) => {
   const edit = req.params.id
-  console.log(req.params.id)
+
   const editOrder = await ServiceOrder.findById(edit)
   res.render('auth/editOrder', { _id: edit })
 }
 
 exports.editOrderAdd = async (req, res) => {
   const edit = req.params.id
-  console.log(edit)
-  const data = stringToBoolean(req.body)
-  console.log(typeof data)
+  const data = req.body
 
   try {
     await ServiceOrder.findByIdAndUpdate(edit, { ...data }, { new: true })
@@ -55,10 +53,10 @@ exports.deleteOrder = async (req, res) => {
   res.redirect('/detailOrder')
 }
 
-function stringToBoolean(obj) {
-  const object = {}
-  for (let key in obj) {
-    object[key] = obj[key] === 'true' ? true : false
-  }
-  return object
-}
+// function stringToBoolean(obj) {
+//   const object = {}
+//   for (let key in obj) {
+//     object[key] = obj[key] === 'true' ? true : false
+//   }
+//   return object
+// }
