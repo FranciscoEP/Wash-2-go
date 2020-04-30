@@ -1,4 +1,5 @@
 const User = require('../models/User')
+const AutoInfo = require('../models/AutoInfo')
 const passport = require('../config/passport')
 
 exports.signupView = (req, res) => {
@@ -29,6 +30,22 @@ exports.signupAdd = (req, res, next) => {
     .catch((error) => {
       next(error)
     })
+}
+
+exports.autoFormView = (req, res) => {
+  res.render('auth/autoForm')
+}
+
+exports.autoFormAdd = async (req, res) => {
+  const { _id: userId } = req.user
+  const data = req.body
+  console.log(req.user.id)
+  const auto = await AutoInfo.create({
+    ...data,
+    userId: req.user.id,
+  })
+  console.log(req.body)
+  res.redirect('/profile')
 }
 
 exports.loginView = (req, res) => {
