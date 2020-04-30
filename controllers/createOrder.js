@@ -47,6 +47,7 @@ exports.editOrderAdd = async (req, res) => {
 
 exports.deleteOrder = async (req, res) => {
   const deleteOrder = req.params.id
+  console.log(deleteOrder)
   await ServiceOrder.findByIdAndRemove(deleteOrder)
   res.redirect('/detailOrder')
 }

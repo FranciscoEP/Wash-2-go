@@ -1,6 +1,13 @@
 <div>
   <a href="/profile">Volver a Home</a>
   <form action="/orderForm" method="POST">
+  <label for="schedule">Elige tu fecha de servicio</label>
+   <input type="date" id="schedule" name="schedule"
+       value="2020-05-01"
+       min="2020-05-01" max="2030-12-31"> <br>
+              <label for="time">Elige la hora para tu servicio</label>
+       <input type="time" name="time" min="10:00"
+        max="19:00" step="1800"> <br>
     <label for="limpiezaCarroceria">Limpieza de Carrocería</label>
     <select id="limpiezaCarroceria" name="limpiezaCarroceria">
       <option value="Sí">¡Sí quiero!</option>

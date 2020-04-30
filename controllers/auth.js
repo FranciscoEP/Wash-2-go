@@ -38,13 +38,15 @@ exports.autoFormView = (req, res) => {
 
 exports.autoFormAdd = async (req, res) => {
   const { _id: userId } = req.user
+  const deleteOrder = req.params.id
+  console.log(deleteOrder)
   const data = req.body
-  console.log(req.user.id)
+  //console.log(req.user.id)
   const auto = await AutoInfo.create({
     ...data,
     userId: req.user.id,
   })
-  console.log(req.body)
+  //console.log(req.body)
   res.redirect('/profile')
 }
 

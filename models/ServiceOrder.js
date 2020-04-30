@@ -14,6 +14,8 @@ const serviceOrderSchema = new Schema(
     lavadoChasis: String,
     encerado: String,
     aspirado: String,
+    schedule: String,
+    time: String,
   },
   {
     versionKey: false,
