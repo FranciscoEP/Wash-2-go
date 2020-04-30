@@ -2,14 +2,16 @@ const User = require('../models/User')
 const ServiceOrder = require('../models/ServiceOrder')
 
 exports.orderFormView = (req, res) => {
-  res.render('auth/orderForm')
+  res.render('auth/orderForm', {_id: req.params.id})
 }
 
 exports.orderFormAdd = async (req, res) => {
   const data = req.body
+  console.log(data)
   const form = await ServiceOrder.create({
     ...data,
     userId: req.user.id,
+    autoId: req.params.id
   })
   res.redirect('/profile')
 }

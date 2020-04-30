@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 const serviceOrderSchema = new Schema(
   {
     userId: { type: Schema.Types.ObjectId, ref: 'User' },
-    autoId: { type: Schema.Types.ObjectId, ref: 'Auto-Info' },
+    autoId: { type: Schema.Types.ObjectId, ref: 'AutoInfo' },
     limpiezaCarroceria: String,
     limpiezaRines: String,
     lavadoMotor: String,

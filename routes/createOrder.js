@@ -11,8 +11,8 @@ const {
 } = require('../controllers/createOrder')
 
 //Create
-router.get('/orderForm', ensureLoggedIn(), orderFormView)
-router.post('/orderForm', ensureLoggedIn(), orderFormAdd)
+router.get('/orderForm/:id', ensureLoggedIn(), orderFormView)
+router.post('/orderForm/:id', ensureLoggedIn(), orderFormAdd)
 
 //Read
 router.get('/detailOrder', ensureLoggedIn(), detailOrderView)
