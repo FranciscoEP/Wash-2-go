@@ -67,7 +67,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')))
 
 // default value for title local
-app.locals.title = 'Wash it up'
+app.locals.title = 'Wash 2 Go'
 
 const index = require('./routes/index')
 const auth = require('./routes/auth')

@@ -7,12 +7,10 @@ exports.orderFormView = (req, res) => {
 
 exports.orderFormAdd = async (req, res) => {
   const data = req.body
-  console.log(req.user.id)
   const form = await ServiceOrder.create({
     ...data,
     userId: req.user.id,
   })
-  console.log(req.body)
   res.redirect('/profile')
 }
 

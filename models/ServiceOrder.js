@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 const serviceOrderSchema = new Schema(
   {
     userId: { type: Schema.Types.ObjectId, ref: 'User' },
-    //autoId: { type: Schema.Types.ObjectId, ref: 'Auto-Info' },
+    autoId: { type: Schema.Types.ObjectId, ref: 'Auto-Info' },
     limpiezaCarroceria: String,
     limpiezaRines: String,
     lavadoMotor: String,
@@ -14,7 +14,6 @@ const serviceOrderSchema = new Schema(
     lavadoChasis: String,
     encerado: String,
     aspirado: String,
-    progressStatus: String,
   },
   {
     versionKey: false,
@@ -25,12 +24,9 @@ const serviceOrderSchema = new Schema(
 const ServiceOrder = mongoose.model('ServiceOrder', serviceOrderSchema)
 module.exports = ServiceOrder
 
-
 // const carrosUser = await carros.find({userId: req.user.id})
 // res.render(auth/vistadeCarros, carrosUser)
 
 // router.get(`/vercarros/:id`, controldor de esta ruta) esto va en su pagina de rutas!!!!
 
 // <a href='/vercarros/{{_id}}'> Ver Carro Detalle </a> esto va en su vista de carros(no en la detallada en la lista de todos los carros)
-
-
