@@ -1,7 +1,22 @@
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+  font: 14px "Roboto", Helvetica, Arial, sans-serif; }
 
 a {
-  color: #00B7FF; }
+  display: inline-block;
+  padding: .35em 2.5em;
+  border: 0.1em solid #996969;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #098765;
+  text-align: center;
+  transition: all 0.5s; }
+
+a:hover {
+  color: #FFFF;
+  background-color: #335965; }
 
 /*# sourceMappingURL=style.css.map */
