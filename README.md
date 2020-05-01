@@ -10,5 +10,4 @@ Puedes probarlo en la siguiente liga [Wash2Go](https://wash2go.herokuapp.com/)
 
 ### By
 
-Emmanuel Solano
-Francisco Ponce
+Emmanuel Solano y Francisco Ponce
