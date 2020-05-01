@@ -12,7 +12,7 @@ const passport = require('./config/passport')
 const session = require('express-session')
 
 mongoose
-  .connect('mongodb://localhost/wash-2-go', {
+  .connect(process.env.DB, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
