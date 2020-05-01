@@ -1,61 +1,58 @@
 <body class="cleaning-order">
   <h1>Crea tu orden de servicio!</h1>
   <div class="service-order-options">
-  <form action="/orderForm/{{_id}}" method="POST">
-  <label for="schedule">Elige tu fecha de servicio</label> <br>
-   <input type="date" id="schedule" name="schedule"
-       value="2020-05-01"
-       min="2020-05-01" max="2030-12-31"> <br>
-              <label for="time">Elige la hora para tu servicio</label> <br>
-       <input type="time" name="time" min="10:00"
-        max="19:00" step="1800"> <br>
-    <label for="limpiezaCarroceria">Limpieza de Carrocería</label> <br>
-    <select id="limpiezaCarroceria" name="limpiezaCarroceria">
-      <option value="Sí">¡Sí quiero!</option>
-      <option value="No">¡No, gracias!</option>
-    </select><br>
-    <label for="limpiezaRines">Limpieza de rines</label> <br>
-    <select id="limpiezaRines" name="limpiezaRines">
-      <option value="Sí">¡Sí quiero!</option>
-      <option value="No">¡No, gracias!</option>
-    </select><br>
-    <label for="lavadoMotor">Limpieza de motor</label> <br>
-    <select id="lavadoMotor" name="lavadoMotor">
-      <option value="Sí">¡Sí quiero!</option>
-      <option value="No">¡No, gracias!</option>
-    </select><br>
-    <label for="limpiezaVestiduras">Limpieza de vestiduras</label> <br>
-    <select id="limpiezaVestiduras" name="limpiezaVestiduras">
-      <option value="Sí">¡Sí quiero!</option>
-      <option value="No">¡No, gracias!</option>
-    </select><br>
-    <label for="descontaminanteCristales">Descontaminante de Cristales</label> <br>
-    <select id="descontaminanteCristales" name="descontaminanteCristales">
-      <option value="Sí">¡Sí quiero!</option>
-      <option value="No">¡No, gracias!</option>
-    </select><br>
-    <label for="pulidoFaros">Pulido de Faros</label> <br>
-    <select id="pulidoFaros" name="pulidoFaros">
-      <option value="Sí">¡Sí quiero!</option>
-      <option value="No">¡No, gracias!</option>
-    </select><br>
-    <label for="lavadoChasis">Lavado de Chasis</label> <br>
-    <select id="lavadoChasis" name="lavadoChasis">
-      <option value="Sí">¡Sí quiero!</option>
-      <option value="No">¡No, gracias!</option>
-    </select><br>
-    <label for="encerado">Encerado</label> <br>
-    <select id="encerado" name="encerado">
-      <option value="Sí">¡Sí quiero!</option>
-      <option value="No">¡No, gracias!</option>
-    </select><br>
-    <label for="aspirado">Aspirado</label> <br>
-    <select id="aspirado" name="aspirado">
-      <option value="Sí">¡Sí quiero!</option>
-      <option value="No">¡No, gracias!</option>
-    </select><br>
-    <input type="submit">
-  </form>
-</div>
-<a href="/profile">Volver a Home</a>
+    <form action="/orderForm/{{_id}}" method="POST">
+      <label for="schedule">Elige tu fecha de servicio</label> <br>
+      <input type="date" id="schedule" name="schedule" value="2020-05-01" min="2020-05-01" max="2030-12-31"> <br>
+      <label for="time">Elige la hora para tu servicio</label> <br>
+      <input type="time" name="time" min="10:00" max="19:00" step="1800"> <br>
+      <label for="limpiezaCarroceria">Limpieza de Carrocería</label> <br>
+      <select id="limpiezaCarroceria" name="limpiezaCarroceria">
+        <option value="Sí">¡Sí quiero!</option>
+        <option value="No">¡No, gracias!</option>
+      </select><br>
+      <label for="limpiezaRines">Limpieza de rines</label> <br>
+      <select id="limpiezaRines" name="limpiezaRines">
+        <option value="Sí">¡Sí quiero!</option>
+        <option value="No">¡No, gracias!</option>
+      </select><br>
+      <label for="lavadoMotor">Limpieza de motor</label> <br>
+      <select id="lavadoMotor" name="lavadoMotor">
+        <option value="Sí">¡Sí quiero!</option>
+        <option value="No">¡No, gracias!</option>
+      </select><br>
+      <label for="limpiezaVestiduras">Limpieza de vestiduras</label> <br>
+      <select id="limpiezaVestiduras" name="limpiezaVestiduras">
+        <option value="Sí">¡Sí quiero!</option>
+        <option value="No">¡No, gracias!</option>
+      </select><br>
+      <label for="descontaminanteCristales">Descontaminante de Cristales</label> <br>
+      <select id="descontaminanteCristales" name="descontaminanteCristales">
+        <option value="Sí">¡Sí quiero!</option>
+        <option value="No">¡No, gracias!</option>
+      </select><br>
+      <label for="pulidoFaros">Pulido de Faros</label> <br>
+      <select id="pulidoFaros" name="pulidoFaros">
+        <option value="Sí">¡Sí quiero!</option>
+        <option value="No">¡No, gracias!</option>
+      </select><br>
+      <label for="lavadoChasis">Lavado de Chasis</label> <br>
+      <select id="lavadoChasis" name="lavadoChasis">
+        <option value="Sí">¡Sí quiero!</option>
+        <option value="No">¡No, gracias!</option>
+      </select><br>
+      <label for="encerado">Encerado</label> <br>
+      <select id="encerado" name="encerado">
+        <option value="Sí">¡Sí quiero!</option>
+        <option value="No">¡No, gracias!</option>
+      </select><br>
+      <label for="aspirado">Aspirado</label> <br>
+      <select id="aspirado" name="aspirado">
+        <option value="Sí">¡Sí quiero!</option>
+        <option value="No">¡No, gracias!</option>
+      </select><br>
+      <input type="submit">
+    </form>
+  </div>
+  <a href="/profile">Volver a Home</a>
 </body>

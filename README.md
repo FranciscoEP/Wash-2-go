@@ -6,4 +6,9 @@ Wash 2 Go es una aplicación que busca facilitar la vida del automovilista prome
 
 ## Link
 
-Puedes probarla en la siguiente liga []
+Puedes probarlo en la siguiente liga [Wash2Go](https://wash2go.herokuapp.com/)
+
+### By
+
+Emmanuel Solano
+Francisco Ponce
