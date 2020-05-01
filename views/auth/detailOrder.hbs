@@ -1,5 +1,6 @@
-<p>Tus órdenes</p>
-<a href="/profile">Volver a Home</a>
+<body class="order-detail-view-body">
+  <div class="order-detail-container">
+    <h1>Tus órdenes</h1>
 {{#each order}}
 <p>Id de tu órden: {{this.userId}}</p>
 <p>Id de tu auto: {{this.autoId}}</p>
@@ -13,7 +14,10 @@
 <p>Pulido de faros: {{this.pulidoFaros}}</p>
 <p>Lavado de chasis: {{this.lavadoChasis}}</p>
 <p>Encerado: {{this.encerado}}</p>
-<p>Apirado: {{this.aspirado}}</p>
+<p>Aspirado: {{this.aspirado}}</p>
 <a href="/editOrder/{{_id}}">Editar</a>
 <a href="/delete/{{_id}}">Cancelar Pedido</a>
+<a href="/profile">Volver a Home</a>
 {{/each}}
+  </div>
+</body>

@@ -39,15 +39,19 @@ a:hover {
   flex-direction: column;
   border-radius: 8px;
   padding: 0px 20px;
+  text-align: center;
+  flex-wrap: wrap;
 }
 
 .welcome-box h1 {
-  margin: 20px;
   font-family: 'Pacifico', cursive;
-  font-size: 86px;
+  font-size: 60px;
 }
 
 .welcome-box p {
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
   font-size: 22px;
   margin-bottom: 15px;
   font-family: 'Pacifico', cursive;
@@ -55,7 +59,7 @@ a:hover {
 }
 
 .welcome-box img {
-  height: 360px;
+  height: 330px;
   transform: scaleX(-1);
 }
 
@@ -65,8 +69,9 @@ a:hover {
   background-repeat: no-repeat;
 }
 
+
 .signup {
-  margin-top: 40px;
+  margin: 150px 0px;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -89,7 +94,7 @@ a:hover {
 }
 
 .signup h1 {
-  font-family: 'Caveat', cursive;
+  font-family: 'Pacifico', cursive;
   font-size: 64px;
   color: black;
 }
@@ -99,7 +104,7 @@ a:hover {
 }
 
 .profile {
-  margin-top: 100px;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -124,7 +129,7 @@ a:hover {
 }
 
 .auto-form {
-  margin-top: 80px;
+  margin-top: 20px;
   text-align: center;
   align-items: center;
   display: flex;
@@ -196,7 +201,7 @@ a:hover {
 }
 
 .profile-edit-body div{
-  margin-top: 20px;
+  margin-top: 0px;
   text-align: center;
   align-items: center;
   display: flex;
@@ -205,12 +210,13 @@ a:hover {
 }
 
 .profile-edit-body img{
-  height: 400px;
+  height: 200px;
   margin-bottom: 30px;
 }
 
 .profile-edit-body div input{
 border-radius: 8px;
+margin: 8px;
 font-family: 'Baloo Paaji 2', cursive;
 font-size: 24px;
 }
@@ -220,3 +226,84 @@ font-size: 24px;
   border-radius: 8px;
   padding: 20px;
 }
+
+.order-detail-view-body{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+margin-left: 5px;
+position: absolute;
+}
+
+.order-detail-view-body div{
+   text-align: left;
+  display: flex;
+  flex-direction: column;
+  }
+
+  .order-detail-view-body h1{
+  font-family: 'Pacifico', cursive;
+  font-size: 40px;
+  margin: 0px;
+  }
+
+  .order-detail-view-body p{
+    margin: 3px;
+    padding: 0px;
+  }
+  
+  .order-detail-container{
+    border: 3px solid #e15c50;
+    border-radius: 8px;
+    padding: 20px;
+    font-family: 'Baloo Paaji 2', cursive;
+    font-size: 24px;
+  }
+
+  .auto-admin{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  #selecciona-auto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #selecciona-auto a{
+    width: 380px;
+  }
+
+  .auto-admin a{
+    width: 380px;
+  }
+
+  .auto-admin h1{
+  font-family: 'Pacifico', cursive;
+  font-size: 40px;
+  margin: 0px;
+  }
+
+  .auto-admin p{
+    font-family: 'Baloo Paaji 2', cursive;
+    font-size: 30px;
+    margin: 10px;
+  }
+
+  .cleaning-order{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+
+  .service-order-options{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+

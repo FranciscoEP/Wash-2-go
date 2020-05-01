@@ -1,9 +1,11 @@
-<h1>Aquì se van a mostrar todos tus autos</h1>
-
-{{#each car}}
-<p>Id de tu órden: {{this.modelo}}</p>
+<body class="auto-admin">
+  <h1>Administra tus autos</h1>
+<div id="selecciona-auto">
+  {{#each car}}
+<p>{{this.marca}} {{this.modelo}}</p>
 <a href="/autoDelete/{{_id}}">Eliminar auto</a>
 <a href="/orderForm/{{_id}}">Crea una orden de limpieza</a>
 {{/each}}
-
+</div>
 <a href="/profile">Volver a Home</a>
+</body>
