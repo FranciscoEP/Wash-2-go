@@ -1,22 +1,55 @@
-body {
-  font: 14px "Roboto", Helvetica, Arial, sans-serif; }
+.body-welcome {
+  margin-top: 60px;
+  font: 14px "Roboto", Helvetica, Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: #f0ebeb;
+  background-image: url(https://cdn.dribbble.com/users/2351/screenshots/3556242/lubelski-dj-graphics-2x.jpg);
+  background-size: cover;
+  background-repeat: no-repeat; }
 
 a {
+  font-size: 22px;
   display: inline-block;
   padding: .35em 2.5em;
-  border: 0.1em solid #996969;
+  border: 0.1em solid white;
   margin: 0 0.3em 0.3em 0;
-  border-radius: 0.12em;
+  border-radius: 8px;
   box-sizing: border-box;
   text-decoration: none;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  color: #098765;
+  color: white;
   text-align: center;
   transition: all 0.5s; }
 
 a:hover {
   color: #FFFF;
-  background-color: #335965; }
+  background-color: #ff7b08; }
+
+.welcome-box {
+  background-color: #e15c50;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 0px 20px; }
+
+.welcome-box h1 {
+  margin: 20px;
+  font-family: 'Pacifico', cursive;
+  font-size: 86px; }
+
+.welcome-box p {
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-family: 'Pacifico', cursive;
+  font-family: 'Source Code Pro', monospace; }
+
+.welcome-box img {
+  height: 360px;
+  transform: scaleX(-1); }
 
 /*# sourceMappingURL=style.css.map */
