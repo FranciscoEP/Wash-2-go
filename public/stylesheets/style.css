@@ -155,4 +155,35 @@ a:hover {
   border: 3px solid #e15c50;
   border-radius: 8px; }
 
+.profile-edit-body {
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f6f6; }
+
+.profile-edit-body h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 60px;
+  margin: 0px; }
+
+.profile-edit-body div {
+  margin-top: 20px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column; }
+
+.profile-edit-body img {
+  height: 400px;
+  margin-bottom: 30px; }
+
+.profile-edit-body div input {
+  border-radius: 8px;
+  font-family: 'Baloo Paaji 2', cursive;
+  font-size: 24px; }
+
+#profile-edit-box {
+  border: 3px solid #e15c50;
+  border-radius: 8px;
+  padding: 20px; }
+
 /*# sourceMappingURL=style.css.map */
