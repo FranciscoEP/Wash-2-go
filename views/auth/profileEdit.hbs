@@ -1,6 +1,22 @@
-<form action="/profileEdit" method="POST">
-  <input type="text" name="name" value="{{this.name}}">
-  <input type="text" name="address" value="{{this.address}}" placeholder="Añade tu dirección">
-  <input type="submit">
-  <a href="/profile">Volver a tu perfil</a>
+<body class="profile-edit-body">
+<div>
+  <h1>Administra tus datos</h1>
+  <img src="https://i.pinimg.com/originals/3a/86/19/3a86195afbe83bb57910d6cf630a1ef5.png" alt="avatar Tiles">
+    <form action="/profileEdit" method="POST">
+  <section id="profile-edit-box">
+    <div>
+    <input type="text" name="name" value="{{this.name}}">
+  </div>
+  <div>
+    <input type="text" name="address" value="{{this.address}}" placeholder="Añade tu dirección">
+  </div>
+  <div>
+    <input id="send-button" type="submit">
+  </div>
+  <div>
+    <a href="/profile">Volver a tu perfil</a>
+  </div>
+  </section>
 </form>
+</div>
+</body>
