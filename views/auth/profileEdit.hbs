@@ -1,3 +1,6 @@
 <form action="/profileEdit" method="POST">
-  <input type="text" name="address"> {{this.address}} </input>
+  <input type="text" name="name" value="{{this.name}}">
+  <input type="text" name="address" value="{{this.address}}" placeholder="Añade tu dirección">
+  <input type="submit">
+  <a href="/profile">Volver a tu perfil</a>
 </form>
