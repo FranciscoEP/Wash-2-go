@@ -1,6 +1,6 @@
 .body-welcome {
   margin-top: 60px;
-  font: 14px "Roboto", Helvetica, Arial, sans-serif;
+  font: 14px 'Roboto', Helvetica, Arial, sans-serif;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -10,11 +10,10 @@
   background-repeat: no-repeat;
 }
 
-
 a {
   font-size: 22px;
   display: inline-block;
-  padding: .35em 2.5em;
+  padding: 0.35em 2.5em;
   border: 0.1em solid white;
   margin: 0 0.3em 0.3em 0;
   border-radius: 8px;
@@ -25,42 +24,42 @@ a {
   color: white;
   text-align: center;
   transition: all 0.5s;
+  background-color: #e15c50;
 }
 
 a:hover {
-  color: #FFFF;
+  color: #ffff;
   background-color: #ff7b08;
 }
 
-.welcome-box{
+.welcome-box {
   background-color: #e15c50;
-align-items: center;
-display: flex;
-flex-direction: column;
-border: 1px solid black;
-border-radius: 8px;
-padding: 0px 20px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  padding: 0px 20px;
 }
 
-.welcome-box h1{
+.welcome-box h1 {
   margin: 20px;
   font-family: 'Pacifico', cursive;
   font-size: 86px;
 }
 
-.welcome-box p{
+.welcome-box p {
   font-size: 22px;
   margin-bottom: 15px;
   font-family: 'Pacifico', cursive;
-font-family: 'Source Code Pro', monospace;
+  font-family: 'Source Code Pro', monospace;
 }
 
-.welcome-box img{
+.welcome-box img {
   height: 360px;
   transform: scaleX(-1);
 }
 
-.register-login{
+.register-login {
   background-image: url(https://es.screenja.com/static/img/thumbs/instagram-gradient-background-1-normal-636.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -73,11 +72,11 @@ font-family: 'Source Code Pro', monospace;
   text-align: center;
 }
 
-.signup div{
+.signup div {
   margin: 15px;
 }
 
-.signup div input{
+.signup div input {
   font-family: 'Pacifico', cursive;
   font-size: 24px;
   width: 280px;
@@ -85,11 +84,11 @@ font-family: 'Source Code Pro', monospace;
   box-shadow: 0px 0px 0px 0px;
 }
 
-#app-button{
+#app-button {
   background-color: #ff9336;
 }
 
-.signup h1{
+.signup h1 {
   font-family: 'Caveat', cursive;
   font-size: 64px;
   color: black;
