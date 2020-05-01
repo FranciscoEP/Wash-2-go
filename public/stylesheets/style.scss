@@ -94,8 +94,8 @@ a:hover {
   color: black;
 }
 
-.profile-body{
-  background-color:#f6f6f6 ;
+.profile-body {
+  background-color: #f6f6f6;
 }
 
 .profile {
@@ -117,4 +117,68 @@ a:hover {
   font-family: 'Pacifico', cursive;
   font-size: 60px;
   margin: 0px;
+}
+
+.autoForm-body {
+  background-color: #ebecf4;
+}
+
+.auto-form {
+  margin-top: 80px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.auto-form img {
+  width: 380px;
+}
+
+.auto-form h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 60px;
+  margin: 0px;
+}
+
+.auto-form div {
+  margin: 20px;
+  font-family: 'Baloo Paaji 2', cursive;
+}
+
+.autoForm-body div input {
+  width: 320px;
+  font-size: 24px;
+}
+
+#send-button {
+  font-size: 22px;
+  display: inline-block;
+  padding: 0.35em 2.5em;
+  border: 0.1em solid white;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 8px;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: white;
+  text-align: center;
+  transition: all 0.5s;
+  background-color: #e15c50;
+}
+
+#send-button:hover {
+  color: #ffff;
+  background-color: #ff7b08;
+}
+
+#tipo {
+  font-family: 'Baloo Paaji 2', cursive;
+  font-size: 20px;
+}
+
+#autoFormVehicle {
+  border: 3px solid #e15c50;
+  border-radius: 8px;
 }

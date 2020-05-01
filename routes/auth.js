@@ -13,6 +13,9 @@ const {
   autoDelete,
   logout,
   profileView,
+  profileEditView,
+  profileEditAdd,
+  deleteUser,
 } = require('../controllers/auth')
 
 //Sign up
@@ -29,8 +32,13 @@ router.post('/login', ensureLoggedOut(), loginAdd)
 
 //Profile
 router.get('/profile', ensureLoggedIn('/login'), profileView)
+router.get('/profileEdit', ensureLoggedIn('/login'), profileEditView)
+router.post('/profileEdit', ensureLoggedIn('/login'), profileEditAdd)
 
 //Logout
 router.get('/logout', ensureLoggedIn('/login'), logout)
+
+//Delete
+router.get('/deleteUser', ensureLoggedIn('/login'), deleteUser)
 
 module.exports = router

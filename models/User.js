@@ -6,7 +6,7 @@ const userSchema = new Schema(
   {
     name: String,
     email: String,
-    description: String,
+    address: String,
     serviceOrder: { type: Schema.Types.ObjectId, ref: 'ServiceOrder' },
   },
   { versionKey: false, timestamps: true }

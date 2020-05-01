@@ -1,20 +1,27 @@
-<body>
-<div>
-  <h1>Completa la información de tu auto</h1>
-  <form action="/autoForm" method="POST">
-    <label for="tipo">Selecciona el tipo de auto</label>
-    <select id="tipo" name="tipo">
-      <option value="SUV">SUV</option>
-      <option value="Sedán">Sedán</option>
-      <option value="Compacto">Compacto</option>
-      <option value="Pick-up">Pick-up</option>
-    </select>
-    <label for="marca">Ingrese la marca de su vehículo</label>
-    <input type="text" name= "marca">
-    <label for="modelo">Ingrese el modelo de su vehículo</label>
-    <input type="text" name= "modelo">
-    <input type="submit">
-  </form>
-</div>
-<a href="/profile">Volver a Home</a>
+<body class="autoForm-body">
+  <div class="auto-form">
+    <h1>Completa la información de tu auto</h1>
+    <img src="https://cdn.dribbble.com/users/146798/screenshots/4834972/bmw.png" alt=" M3.png">
+    <form id="autoFormVehicle" action="/autoForm" method="POST">
+      <div>
+        <label id="tipo" for="tipo">Selecciona el tipo de auto</label> <br>
+        <select id="tipo" name="tipo">
+          <option value="SUV">SUV</option>
+          <option value="Sedán">Sedán</option>
+          <option value="Compacto">Compacto</option>
+          <option value="Pick-up">Pick-up</option>
+        </select>
+      </div>
+      <div>
+        <input id="tipo" type="text" name="marca" placeholder="Marca de su vehículo">
+      </div>
+      <div>
+        <input id="tipo" type="text" name="modelo" placeholder="Modelo de su vehículo">
+      </div>
+      <div>
+        <input id="send-button" type="submit">
+      </div>
+      <a href="/profile">Volver a Home</a>
+    </form>
+  </div>
 </body>

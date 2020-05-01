@@ -90,4 +90,27 @@ exports.logout = (req, res) => {
   res.redirect('/')
 }
 
+//Update user
 
+exports.profileEditView = async (req, res) => {
+  const userInfo = req.user.id
+  const userInSession = await User.findById(userInfo)
+
+  res.render('auth/profileEdit', userInSession)
+}
+
+exports.profileEditAdd = async (req, res) => {
+  const userInfo = req.user.id
+  const userInSession = await User.findByIdAndUpdate(
+    userInfo,
+    { $set: { ...req.body } },
+    { new: true }
+  )
+  res.redirect('/profile')
+}
+
+exports.deleteUser = async (req, res) => {
+  const userInfo = req.user.id
+  await User.findByIdAndDelete(userInfo)
+  res.redirect('/')
+}
