@@ -188,19 +188,19 @@ a:hover {
   border-radius: 8px;
 }
 
-.profile-edit-body{
+.profile-edit-body {
   display: flex;
   flex-direction: column;
   background-color: #f6f6f6;
 }
 
-.profile-edit-body h1{
+.profile-edit-body h1 {
   font-family: 'Pacifico', cursive;
   font-size: 60px;
   margin: 0px;
 }
 
-.profile-edit-body div{
+.profile-edit-body div {
   margin-top: 0px;
   text-align: center;
   align-items: center;
@@ -209,101 +209,103 @@ a:hover {
 
 }
 
-.profile-edit-body img{
+.profile-edit-body img {
   height: 200px;
   margin-bottom: 30px;
 }
 
-.profile-edit-body div input{
-border-radius: 8px;
-margin: 8px;
-font-family: 'Baloo Paaji 2', cursive;
-font-size: 24px;
+.profile-edit-body div input {
+  border-radius: 8px;
+  margin: 8px;
+  font-family: 'Baloo Paaji 2', cursive;
+  font-size: 24px;
 }
 
-#profile-edit-box{
+#profile-edit-box {
   border: 3px solid #e15c50;
   border-radius: 8px;
   padding: 20px;
 }
 
-.order-detail-view-body{
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-margin-left: 5px;
-position: absolute;
+.order-detail-view-body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: 5px;
+  position: absolute;
 }
 
-.order-detail-view-body div{
-   text-align: left;
+.order-detail-view-body div {
+  text-align: left;
   display: flex;
   flex-direction: column;
-  }
+}
 
-  .order-detail-view-body h1{
+.order-detail-view-body h1 {
   font-family: 'Pacifico', cursive;
   font-size: 40px;
   margin: 0px;
-  }
+}
 
-  .order-detail-view-body p{
-    margin: 3px;
-    padding: 0px;
-  }
-  
-  .order-detail-container{
-    border: 3px solid #e15c50;
-    border-radius: 8px;
-    padding: 20px;
-    font-family: 'Baloo Paaji 2', cursive;
-    font-size: 24px;
-  }
+.order-detail-view-body p {
+  margin: 3px;
+  padding: 0px;
+}
 
-  .auto-admin{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-  }
+.order-detail-container {
+  border: 3px solid #e15c50;
+  border-radius: 8px;
+  padding: 20px;
+  font-family: 'Baloo Paaji 2', cursive;
+  font-size: 24px;
+}
 
-  #selecciona-auto{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.auto-admin {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
 
-  #selecciona-auto a{
-    width: 380px;
-  }
+#selecciona-auto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .auto-admin a{
-    width: 380px;
-  }
+#selecciona-auto a {
+  width: 380px;
+}
 
-  .auto-admin h1{
+.auto-admin a {
+  width: 380px;
+}
+
+.auto-admin h1 {
   font-family: 'Pacifico', cursive;
   font-size: 40px;
   margin: 0px;
-  }
+}
 
-  .auto-admin p{
-    font-family: 'Baloo Paaji 2', cursive;
-    font-size: 30px;
-    margin: 10px;
-  }
+.auto-admin p {
+  font-family: 'Baloo Paaji 2', cursive;
+  font-size: 30px;
+  margin: 10px;
+}
 
-  .cleaning-order{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-  
+.cleaning-order {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
 
-  .service-order-options{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
+.service-order-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.4em;
+  border: 3px solid #e15c50;
+  margin: 0 30px;
+  padding: 0 15px;
+}

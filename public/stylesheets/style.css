@@ -255,6 +255,10 @@ a:hover {
 .service-order-options {
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  font-size: 1.4em;
+  border: 3px solid #e15c50;
+  margin: 0 30px;
+  padding: 0 15px; }
 
 /*# sourceMappingURL=style.css.map */

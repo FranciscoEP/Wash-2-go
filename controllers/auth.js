@@ -24,7 +24,6 @@ exports.signupAdd = (req, res, next) => {
 
   User.register({ email, name, sector }, password)
     .then((userCreated) => {
-      console.log(userCreated)
       res.redirect('/login')
     })
     .catch((error) => {
