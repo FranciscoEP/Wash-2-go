@@ -1,11 +1,16 @@
-<h2>Ingresa tu usuario</h2>
-
+<body class="register-login">
+  <div class="signup">
+  <h1>Ingresa tu usuario</h2>
 <form action="/login" method="POST">
-  <label name="email">Email</label>
-  <input type="text" name="email"> <br><br>
-  <label name="password">Contraseña</label>
-  <input type="password" name="password"><br><br>
-  <input type="submit" value="Login">
+<div>
+  <input type="text" name="email" placeholder="E-mail"> 
+  </div>
+  <div>
+  <input type="password" name="password" placeholder="contraseña">
+  </div>
+  <div>
+  <input id="app-button" type="submit" value="Login">
+  </div>
 </form>
-
-<a href="/">Regresar al home</a>
+</div>
+</body>

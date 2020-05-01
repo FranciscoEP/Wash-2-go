@@ -1,12 +1,19 @@
-<div class="signup">
+<body class="register-login">
+  <div class="signup">
+  <h1>Crea tu cuenta!</h1>
 <form action="signup" method="POST">
-  <label name="name">Nombre</label>
-  <input type="text" name="name"> <br><br>
-  <label name="email">Email</label>
-  <input type="text" name="email"> <br><br>
-  <label name="password">Contraseña</label>
-  <input type="password" name="password"><br><br>
-  <input type="chambedor" name="chambeador" value='true' hidden>
-  <input type="submit" value="Sign Up!">
+  <div>
+  <input type="text" name="name" placeholder="Nombre">
+  </div>
+  <div>
+  <input type="text" name="email" placeholder="E-mail">
+  </div>
+  <div>
+  <input type="password" name="password" placeholder="Contraseña">
+  </div>
+  <div>
+  <input id="app-button" type="submit" value="Regístrate!">
+  </div>
 </form>
 </div>
+</body>

@@ -52,4 +52,33 @@ a:hover {
   height: 360px;
   transform: scaleX(-1); }
 
+.register-login {
+  background-image: url(https://es.screenja.com/static/img/thumbs/instagram-gradient-background-1-normal-636.png);
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.signup {
+  margin-top: 160px;
+  display: flex;
+  flex-direction: column;
+  text-align: center; }
+
+.signup div {
+  margin: 15px; }
+
+.signup div input {
+  font-family: 'Pacifico', cursive;
+  font-size: 24px;
+  width: 280px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 0px 0px; }
+
+#app-button {
+  background-color: #ff9336; }
+
+.signup h1 {
+  font-family: 'Caveat', cursive;
+  font-size: 64px;
+  color: black; }
+
 /*# sourceMappingURL=style.css.map */
